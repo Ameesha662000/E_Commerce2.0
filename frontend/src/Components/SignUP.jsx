@@ -27,7 +27,8 @@ const SignUP=()=>{
         })
         result=await result.json() //Converts the response from the server into a JavaScript object.
         console.log(result);
-           localStorage.setItem('user-info',JSON.stringify(result))//stores the user data in the local storage
+           localStorage.setItem('user-info',JSON.stringify(result.result))//stores the user data in the local storage
+           localStorage.setItem('token',JSON.stringify(result.auth))//stores the user data in the local storage
            alert("User Registered Successfully");
            navigate('/');//redirects to the home page
         
